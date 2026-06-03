@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pause — приложение коротких медитаций</title>
+  <meta name="description" content="Pause — приложение коротких медитаций от двух до пяти минут. Для тех, кому некогда сидеть на длинных сессиях.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="header__inner container">
+      <a href="#" class="logo" aria-label="Pause — на главную">Pause</a>
+
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="#about">о нас</a>
+        <a href="#audience">кому подойдёт</a>
+        <a href="#features">что в приложении</a>
+      </nav>
+
+      <a href="#download" class="btn btn--primary header__cta">
+        <span class="header__cta-short">Скачать</span>
+        <span class="header__cta-full">Скачать приложение</span>
+      </a>
+
+      <button
+        class="hamburger"
+        id="hamburger"
+        aria-label="Открыть меню"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <a href="#about">о нас</a>
+      <a href="#audience">кому подойдёт</a>
+      <a href="#features">что в приложении</a>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="container">
+        <img
+          src="assets/hero-illustration.png"
+          alt="Иллюстрация: фигура в медитации с бабочками"
+          class="hero__image"
+          width="480"
+          height="480"
+        >
+        <h1 class="hero__title">Pause — приложение коротких медитаций</h1>
+        <p class="hero__subtitle">Все практики длятся от двух до пяти минут</p>
+        <a href="#download" class="btn btn--primary">Скачать приложение</a>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container">
+        <p class="about__text">
+          Идея простая: медитация не должна занимать полчаса и требовать особых условий. Открыл приложение, послушал, закрыл — и пошёл дальше по делам. Так проще встроить её в обычный день и не бросить через неделю
+        </p>
+      </div>
+    </section>
+
+    <section class="audience" id="audience">
+      <div class="container">
+        <h2 class="section-title">Кому подойдёт приложение?</h2>
+
+        <div class="audience__grid">
+
+          <article class="card">
+            <div class="card__text-block">
+              <h3 class="card__title">Тем, кто хочет начать медитировать</h3>
+              <p class="card__text">Тем, кто хочет попробовать медитацию</p>
+            </div>
+            <img src="assets/card-start.png" alt="" class="card__image">
+          </article>
+
+          <article class="card">
+            <div class="card__text-block">
+              <h3 class="card__title">Тем, кто уже начинал, но бросил</h3>
+              <p class="card__text">Не довёл до привычки и не смог сделать регулярной практикой</p>
+            </div>
+            <img src="assets/card-restart.png" alt="" class="card__image">
+          </article>
+
+          <article class="card">
+            <div class="card__text-block">
+              <h3 class="card__title">Тем, кому нужна пауза в течение дня</h3>
+              <p class="card__text">Или вечером перед сном, или между задачами в офисе</p>
+            </div>
+            <img src="assets/card-pause.png" alt="" class="card__image">
+          </article>
+
+          <article class="card">
+            <div class="card__text-block">
+              <h3 class="card__title">Тем, кому хочется простого подхода</h3>
+              <p class="card__text">Если хочется не усложнить, а упростить</p>
+            </div>
+            <img src="assets/card-simple.png" alt="" class="card__image">
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="container">
+        <h2 class="section-title">Что ждёт в приложении?</h2>
+
+        <div class="tabs">
+
+          <div class="tabs__nav" role="tablist" aria-label="Возможности приложения">
+
+            <button
+              class="tab"
+              role="tab"
+              id="tab-ritual"
+              aria-selected="true"
+              aria-controls="panel-ritual"
+              tabindex="0"
+            >
+              <span class="tab__icon" aria-hidden="true">
+                <img src="assets/icon-ritual.svg" alt="">
+              </span>
+              <span>Утренний ритуал</span>
+            </button>
+
+            <button
+              class="tab"
+              role="tab"
+              id="tab-progress"
+              aria-selected="false"
+              aria-controls="panel-progress"
+              tabindex="-1"
+            >
+              <span class="tab__icon" aria-hidden="true">
+                <img src="assets/icon-progress.svg" alt="">
+              </span>
+              <span>Прогресс</span>
+            </button>
+
+            <button
+              class="tab"
+              role="tab"
+              id="tab-catalog"
+              aria-selected="false"
+              aria-controls="panel-catalog"
+              tabindex="-1"
+            >
+              <span class="tab__icon" aria-hidden="true">
+                <img src="assets/icon-catalog.svg" alt="">
+              </span>
+              <span>Каталог медитаций</span>
+            </button>
+
+          </div>
+
+          <div class="tabs__panels">
+
+            <div
+              class="tab-panel"
+              role="tabpanel"
+              id="panel-ritual"
+              aria-labelledby="tab-ritual"
+            >
+              <div class="tab-panel__content">
+                <h3 class="tab-panel__title">Утренний ритуал</h3>
+                <p class="tab-panel__text">
+                  Короткая практика на каждое утро. Дыхание, заземление и одно намерение на день. Длится три минуты
+                </p>
+                <ul class="features-list">
+                  <li>Мягкое начало дня</li>
+                  <li>Дыхательная практика</li>
+                  <li>Намерение на день</li>
+                </ul>
+                <a href="#download" class="btn btn--primary">Скачать приложение</a>
+              </div>
+              <div class="tab-panel__visual">
+                <img src="assets/phone-home.png" alt="Главный экран приложения" class="phone-mockup phone-mockup--home">
+                <img src="assets/phone-meditation.png" alt="Экран утренней медитации" class="phone-mockup phone-mockup--meditation">
+              </div>
+            </div>
+
+            <div
+              class="tab-panel"
+              role="tabpanel"
+              id="panel-progress"
+              aria-labelledby="tab-progress"
+              hidden
+            >
+              <div class="tab-panel__content">
+                <h3 class="tab-panel__title">Прогресс</h3>
+                <p class="tab-panel__text">
+                  История твоих сессий с датой и временем. Без счёта пропусков и без напоминаний — ты сама решаешь, когда вернуться
+                </p>
+                <ul class="features-list">
+                  <li>Видишь свои сессии</li>
+                  <li>Маленькие победы каждый день</li>
+                  <li>Никакого давления</li>
+                </ul>
+                <a href="#download" class="btn btn--primary">Скачать приложение</a>
+              </div>
+              <div class="tab-panel__visual">
+                <img src="assets/phone-progress-1.png" alt="Экран прогресса" class="phone-mockup phone-mockup--home">
+                <img src="assets/phone-progress-2.png" alt="Экран статистики" class="phone-mockup phone-mockup--meditation">
+              </div>
+            </div>
+
+            <div
+              class="tab-panel"
+              role="tabpanel"
+              id="panel-catalog"
+              aria-labelledby="tab-catalog"
+              hidden
+            >
+              <div class="tab-panel__content">
+                <h3 class="tab-panel__title">Каталог медитаций</h3>
+                <p class="tab-panel__text">
+                  Несколько форматов на разные ситуации: фокус, снятие стресса, подготовка ко сну, дыхание. Каждая медитация — от двух до пяти минут
+                </p>
+                <ul class="features-list">
+                  <li>Фокус перед задачей</li>
+                  <li>Снятие стресса</li>
+                  <li>Подготовка ко сну</li>
+                </ul>
+                <a href="#download" class="btn btn--primary">Скачать приложение</a>
+              </div>
+              <div class="tab-panel__visual">
+                <img src="assets/phone-catalog-1.png" alt="Каталог медитаций" class="phone-mockup phone-mockup--home">
+                <img src="assets/phone-catalog-2.png" alt="Медитация" class="phone-mockup phone-mockup--meditation">
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="download" id="download">
+      <div class="container">
+        <h2 class="section-title">Попробуйте уже сейчас</h2>
+
+        <div class="stores">
+          <a href="#" class="store-badge" aria-label="Скачать в RuStore">
+            <img src="assets/badge-rustore.png" alt="RuStore">
+          </a>
+          <a href="#" class="store-badge" aria-label="Скачать в AppGallery">
+            <img src="assets/badge-appgallery.png" alt="AppGallery">
+          </a>
+          <a href="#" class="store-badge" aria-label="Скачать в Google Play">
+            <img src="assets/badge-googleplay.png" alt="Google Play">
+          </a>
+          <a href="#" class="store-badge" aria-label="Скачать в App Store">
+            <img src="assets/badge-appstore.png" alt="App Store">
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
